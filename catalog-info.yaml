@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: app-demo-test-1
+  annotations:
+    "backstage.io/project": "png-gcp-learning-poc"
+    "backstage.io/cloud-run": "demo-test-1"
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: monkmantra/app-demo-test-1
+spec:
+  type: service
+  owner: user:de-ims
+  lifecycle: experimental
+  providesApis:
+    - demo-test-1
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: demo-test-1
+  description: The App APIs Specification. Demo test application
+  tags:
+    - fastapi
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: user:de-ims
+  definition:
+    $text: ./fastapi.yaml

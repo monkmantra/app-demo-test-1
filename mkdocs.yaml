@@ -1,0 +1,5 @@
+site_name: "FastAPI Application demo-test-1"
+site_description: "This is simple FastAPI application created using Uvicorn framework. Demo test application"
+
+nav:
+  - Introduction: index.md
