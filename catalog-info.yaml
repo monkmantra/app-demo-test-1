@@ -11,6 +11,8 @@ spec:
   type: service
   owner: user:de-ims
   lifecycle: experimental
+  dependsOn:
+    - component:default/infra-demo-test-1
   providesApis:
     - demo-test-1
 
